@@ -22,7 +22,7 @@
 
 # 📖 OOP RUBY School Libray <a name="about-project"></a>
 
-**OOP RUBY School Libray** is a library of that manages all the students and teachers data .
+**School Libray** is a library that manages all the students and teachers data.
 
 ### Tech Stack <a name="tech-stack"></a>
 
