@@ -3,7 +3,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Decode a Morse code message ](#-decode-a-morse-code-message-)
+- [📖 MyEnumerable ](#-OOP RUBY School Libray-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -11,7 +11,6 @@
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
-    - [Install](#install)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -21,12 +20,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Decode a Morse code message <a name="about-project"></a>
+# 📖 OOP RUBY School Libray <a name="about-project"></a>
 
-**Decode a Morse code message** is an application that can be used to decode sentences weitten in morse to
-words in the alphabet.
-
-## 🛠 Built With <a name="built-with"></a>
+**School Libray** is a library that manages all the students and teachers data.
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -41,21 +37,29 @@ words in the alphabet.
 
 ### Key Features <a name="key-features"></a>
 
-- **Decode morse code**
+- **Add Classes**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> There are no live demos for this project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps:
+
+To get a local copy up and running, follow these steps:
 - Create a local directory where you can clone the project
 - Clone the project to your directory by running
-  - `https://github.com/Lucash2022/Morse_code_message.git`
+  - `https://github.com/lucash2022/school-library.git`
 - Run the code with ruby
 
 ### Prerequisites
@@ -72,16 +76,10 @@ Clone this repository to your desired folder:
 
 - Create a local directory where you can clone the project
 - Clone the project to your directory by running
-  - `https://github.com/Lucash2022/Morse_code_message.git`
+  - `https://github.com/lucash2022/school-library.git`
 
-### Install
+## 👥 Author <a name="authors"></a>
 
-Install this project with:
-
-- Ruby
-
-
-## 👥 Authors <a name="authors"></a>
 
 👤 **Lucas Erkana**
 
@@ -89,13 +87,14 @@ Install this project with:
 - Twitter: [@Lucas_David_22](https://twitter.com/@Lucas_David_22)
 - LinkedIn: [Lucas Erkana](https://www.linkedin.com/in/lucas-erkana/)
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Encode text to morse code**
+- [ ] **decorate a class**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,7 +115,6 @@ Feel free to check the [issues page](../../issues/).
 If you like this project kindly leave a ⭐
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
