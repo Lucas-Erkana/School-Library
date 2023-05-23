@@ -37,9 +37,6 @@ This project helps to understand the basics of Ruby programming language. It is 
 
 ### Tech Stack <a id="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-
   <details>
     <summary>Server</summary>
     <ul>
@@ -60,11 +57,6 @@ This project helps to understand the basics of Ruby programming language. It is 
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a id="live-demo"></a>
-
-> There are no live demos for this project.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
