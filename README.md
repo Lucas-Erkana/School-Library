@@ -3,7 +3,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 MyEnumerable ](#-OOP RUBY School Libray-)
+- [📖 About the Project](#-about-project-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -20,9 +20,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 OOP RUBY School Libray <a name="about-project"></a>
+# 📖 School Libray <a name="about-project"></a>
 
-**School Libray** is a library that manages all the students and teachers data.
+This project helps to understand the basics of Ruby programming language. It is a collection of exercises and projects that will help you to understand the basics of OOPS in Ruby programming language.
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -38,7 +38,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **Add Classes**
-
+- **Decorate a class**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,7 +94,7 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **decorate a class**
+- [ ] **set up associations**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
