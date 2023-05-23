@@ -32,14 +32,21 @@
 
 This project helps to understand the basics of Ruby programming language. It is a collection of exercises and projects that will help you to understand the basics of OOPS in Ruby programming language.
 
-### Tech Stack <a id="tech-stack"></a>
+## 🛠 Built With <a name="built-with"></a>
 
-<details>
-<summary>Server</summary>
-  <ul>
-    <li><a href="https://guides.rubyonrails.org/getting_started.html">Ruby</a></li>
-  </ul>
-</details>
+### Tech Stack <a name="tech-stack"></a>
+
+> Describe the tech stack and include only the relevant sections that apply to your project.
+
+
+  <details>
+    <summary>Server</summary>
+    <ul>
+      <li><a href="#">Ruby</a></li>
+    </ul>
+  </details>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Features -->
 
