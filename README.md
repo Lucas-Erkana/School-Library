@@ -52,6 +52,8 @@ This project helps to understand the basics of Ruby programming language. It is 
 
 - **Add Classes**
 - **Decorate a class**
+- **Set up associations**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,7 +104,7 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a id="future-features"></a>
 
-- [ ] **set up associations**
+- [ ] **add basic UI**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
