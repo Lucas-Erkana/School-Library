@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruby Code Execution</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        margin-top: 40px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        height: 35px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        margin-top: 10px;
+        box-sizing: border-box;
+      }
+
+      .result-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .submit-button {
+        padding: 10px 20px;
+        background-color: #428bca;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .back-button {
+        padding: 10px 20px;
+        background-color: #ccc;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="form-container">
+      <h1>Ruby Code Execution</h1>
+      <form id="ruby-form" action="/process" method="post">
+        <label for="age">Age:</label>
+        <br>
+        <input type="text" name="age" id="age" required>
+        <br><br>
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" name="name" id="name" required>
+        <br><br>
+        <input type="submit" value="Submit" class="submit-button">
+      </form>
+    </div>
+
+    <div id="result-container" class="hidden">
+      <h1>Results</h1>
+
+      <h2>Original name:</h2>
+      <input type="text" id="original-name" readonly>
+
+      <h2>Capitalized name:</h2>
+      <input type="text" id="capitalized-name" readonly>
+
+      <h2>Capitalized and trimmed name:</h2>
+      <input type="text" id="capitalized-trimmed-name" readonly>
+
+      <br><br>
+      <button id="back-button" class="back-button">Back</button>
+    </div>
+
+    <script>
+      // Function to toggle form and result containers
+      function toggleContainers() {
+        const formContainer = document.getElementById('form-container');
+        const resultContainer = document.getElementById('result-container');
+        formContainer.classList.toggle('hidden');
+        resultContainer.classList.toggle('hidden');
+      }
+
+      // Function to handle form submission
+      function handleFormSubmission(event) {
+        event.preventDefault();
+
+        const age = document.getElementById('age').value;
+        const name = document.getElementById('name').value;
+
+        // Send form data to the server using Ajax or fetch API
+        // Process the response and update the result fields
+
+        // Example code to update the result fields
+        const originalName = document.getElementById('original-name');
+        const capitalizedName = document.getElementById('capitalized-name');
+        const capitalizedTrimmedName = document.getElementById('capitalized-trimmed-name');
+
+        originalName.value = name;
+        capitalizedName.value = name.toUpperCase();
+        capitalizedTrimmedName.value = name.toUpperCase().trim();
+
+        // Show the result container and hide the form container
+        toggleContainers();
+      }
+
+      // Function to handle back button click
+      function handleBackButtonClick() {
+        // Show the form container and hide the result container
+        toggleContainers();
+      }
+
+      // Add event listeners to form submission and back button click
+      const form = document.getElementById('ruby-form');
+      form.addEventListener('submit', handleFormSubmission);
+
+      const backButton = document.getElementById('back-button');
+      backButton.addEventListener('click', handleBackButtonClick);
+    </script>
+  </body>
+</html>
