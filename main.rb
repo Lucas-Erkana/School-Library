@@ -36,10 +36,6 @@ class Main
       end
 
       break if option == '7' # Exit the loop if '7' is entered
-
-      puts ' '
-      puts 'Press any key to continue'
-      gets.chomp
     end
   end
 
