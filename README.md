@@ -64,15 +64,6 @@ This project helps to understand the basics of Ruby programming language. It is 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a id="getting-started"></a>
-
-To get a local copy up and running, follow these steps:
-
-To get a local copy up and running, follow these steps:
-- Create a local directory where you can clone the project
-- Clone the project to your directory by running
-  - `https://github.com/Lucash2022/School-Library.git`
-- Run the code with ruby
-
 ### Prerequisites
 
 In order to run this project you need:
@@ -83,14 +74,13 @@ In order to run this project you need:
 
 ### Setup
 
-Clone this repository to your desired folder:
+To get a local copy up and running, follow these steps:
 
 - Create a local directory where you can clone the project
   - `https://github.com/Lucash2022/School-Library.git`
-
 ### Usage
 
-To run the project, execute the following command:
+To run the project, execute the following command in command line:
 > ruby main.rb
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
