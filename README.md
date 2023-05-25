@@ -86,7 +86,6 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 - Create a local directory where you can clone the project
-- Clone the project to your directory by running
   - `https://github.com/Lucash2022/School-Library.git`
 
 ### Usage
