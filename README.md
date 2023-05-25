@@ -53,6 +53,7 @@ This project helps to understand the basics of Ruby programming language. It is 
 - **Add Classes**
 - **Decorate a class**
 - **Set up associations**
+- **basic UI**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -88,6 +89,13 @@ Clone this repository to your desired folder:
 - Clone the project to your directory by running
   - `https://github.com/Lucash2022/School-Library.git`
 
+### Usage
+
+To run the project, execute the following command:
+> ruby main.rb
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 👥 Author <a id="authors"></a>
 
 
@@ -104,7 +112,7 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a id="future-features"></a>
 
-- [ ] **add basic UI**
+- [ ] **add Graphic User Interface**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
