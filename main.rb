@@ -19,7 +19,7 @@ class Main
       option = gets.chomp
       case option
       when '1'
-        @app.list_books
+        @app.list_book
       when '2'
         @app.list_people
       when '3'
@@ -30,15 +30,14 @@ class Main
         @app.create_rental
       when '6'
         @app.list_rentals
-      when '8'
+      binding.pry
+      when "7"
         break
       else
         puts 'That is not a valid number'
       end
 
       puts ' '
-
-      puts 'Press any key to continue '
       gets.chomp
     end
 
