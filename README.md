@@ -29,7 +29,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 School Libray <a id="about-project"></a>
+# 📖 School Library <a id="about-project"></a>
 
 This project helps to understand the basics of Ruby programming language. It is a collection of exercises and projects that will help you to understand the basics of OOPS in Ruby programming language.
 
@@ -54,7 +54,7 @@ This project helps to understand the basics of Ruby programming language. It is 
 - **Decorate a class**
 - **Set up associations**
 - **basic UI**
-
+- **refactor to meet SOLID principles**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,7 +77,7 @@ In order to run this project you need:
 To get a local copy up and running, follow these steps:
 
 - Create a local directory where you can clone the project
-  - `https://github.com/Lucash2022/School-Library.git`
+  - `https://github.com/karanJ2212/School_library_Ruby.git`
 ### Usage
 
 To run the project, execute the following command in command line:
@@ -87,6 +87,10 @@ To run the project, execute the following command in command line:
 
 ## 👥 Author <a id="authors"></a>
 
+👤 **Karan Jain**
+
+- GitHub: [@karanjain2212](https://github.com/karanjain2212)
+- LinkedIn: [@karanjain2212](https://linkedin.com/in/karanjain2212)
 
 👤 **Lucas Erkana**
 
@@ -101,7 +105,7 @@ To run the project, execute the following command in command line:
 
 ## 🔭 Future Features <a id="future-features"></a>
 
-- [ ] **add Graphic User Interface**
+- [ ] **Add unit tests for all the methods in all the classes**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
