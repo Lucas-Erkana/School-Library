@@ -21,12 +21,11 @@ class Interface
       display_options
       option = gets.chomp
 
-      handle_option(option)
+      handle_option(option.downcase)
 
       puts ' '
-      puts 'Press any key to continue, or press Q to quit'
-      input = gets.chomp
-      break if input.downcase == 'q'
+      # input = gets.chomp
+      break if option.downcase == 'q'
     end
 
     puts 'Thank you! You are always welcome.'
@@ -50,7 +49,9 @@ class Interface
     if action
       send(action)
     else
+      puts '*************************************'
       puts 'That is not a valid number or option'
+      puts '*************************************'
     end
   end
 

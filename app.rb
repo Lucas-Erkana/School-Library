@@ -27,7 +27,7 @@ class App
 
   def list_people
     if @people_list.empty?
-      puts 'There is no people'
+      puts 'There are no people'
     else
       @people_list.each do |person|
         puts "[#{person.class}] Name: #{person.name} ID: #{person.id} Age: #{person.age}"
