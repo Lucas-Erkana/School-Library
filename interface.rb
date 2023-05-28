@@ -1,6 +1,16 @@
 require './app'
 
 class Interface
+  OPTION_ACTIONS = {
+    '1' => :handle_list_books,
+    '2' => :handle_list_people,
+    '3' => :handle_create_person,
+    '4' => :handle_create_book,
+    '5' => :handle_create_rental,
+    '6' => :handle_list_rentals,
+    'q' => :quit
+  }.freeze
+
   def initialize(app)
     @app = app
   end
@@ -11,24 +21,7 @@ class Interface
       display_options
       option = gets.chomp
 
-      case option
-      when '1'
-        @app.list_books
-      when '2'
-        @app.list_people
-      when '3'
-        @app.create_person
-      when '4'
-        @app.create_book
-      when '5'
-        @app.create_rental
-      when '6'
-        @app.list_rentals
-      when 'q', 'Q'
-        break
-      else
-        puts 'That is not a valid number or option'
-      end
+      handle_option(option)
 
       puts ' '
       puts 'Press any key to continue, or press Q to quit'
@@ -36,7 +29,7 @@ class Interface
       break if input.downcase == 'q'
     end
 
-    puts 'Thank you!. You are always welcome'
+    puts 'Thank you! You are always welcome.'
   end
 
   private
@@ -50,5 +43,42 @@ class Interface
     puts '5 - Create a rental'
     puts '6 - List all rentals for a given person id'
     puts 'Q - Quit'
+  end
+
+  def handle_option(option)
+    action = OPTION_ACTIONS[option]
+    if action
+      send(action)
+    else
+      puts 'That is not a valid number or option'
+    end
+  end
+
+  def handle_list_books
+    @app.list_books
+  end
+
+  def handle_list_people
+    @app.list_people
+  end
+
+  def handle_create_person
+    @app.create_person
+  end
+
+  def handle_create_book
+    @app.create_book
+  end
+
+  def handle_create_rental
+    @app.create_rental
+  end
+
+  def handle_list_rentals
+    @app.list_rentals
+  end
+
+  def quit
+    # No action required for quitting
   end
 end
