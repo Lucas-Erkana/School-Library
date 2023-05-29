@@ -1,9 +1,10 @@
-require './book'
-require './rental'
-require './classroom'
-require_relative 'student'
-require_relative 'teacher'
+require_relative 'classroom'
 require_relative 'person'
+require_relative 'book'
+require_relative 'rental'
+require_relative 'teacher'
+require_relative 'student'
+require_relative 'input'
 
 class App
   attr_accessor :people_list, :book_list, :rental_list
@@ -12,16 +13,16 @@ class App
     @people_list = []
     @book_list = []
     @rental_list = []
+    @input = Input.new
   end
 
   def list_books
     if @book_list.empty?
       puts 'There are no books yet'
-      return
-    end
-
-    @book_list.each do |book|
-      puts "Title: #{book.title}, Author: #{book.author}"
+    else
+      @book_list.each do |book|
+        puts "Title: #{book.title}, Author: #{book.author}"
+      end
     end
   end
 
@@ -36,52 +37,41 @@ class App
   end
 
   def create_person
-    puts 'Do you want to  create a student (1) or a teacher(2)? [Input the number 1 or 2]: '
-    input_result = gets.chomp.to_i
+    input_result = @input.person_input
 
     case input_result
     when 1
       create_student
     when 2
       create_teacher
+    else
+      puts 'Invalid input. Please select 1 for student or 2 for teacher.'
     end
   end
 
   def create_student
-    print 'Age:'
-    age = gets.chomp
-
-    print 'Name:'
-    name = gets.chomp
-
-    print 'Has Parent permission? [Y/N]'
-    permission = gets.chomp
+    age = @input.age_input
+    name = @input.name_input
+    permission = @input.parent_permission_input
 
     student = Student.new(age, name, parent_permission: permission)
-    @people_list.push(student)
-    puts 'Student Created Successfully'
+    @people_list << student
+    puts 'Student created successfully'
   end
 
   def create_teacher
-    print 'Age:'
-    age = gets.chomp
+    age = @input.age_input
+    name = @input.name_input
+    specialization = @input.specialization_input
 
-    print 'Name:'
-    name = gets.chomp
-
-    print 'Specialization:'
-    specialization = gets.chomp
-
-    @people_list << Teacher.new(age, name, specialization: specialization)
-    puts 'Teacher Created Successfully'
+    teacher = Teacher.new(age, name, specialization: specialization)
+    @people_list << teacher
+    puts 'Teacher created successfully'
   end
 
   def create_book
-    print 'Title: '
-    title = gets.chomp
-
-    print 'Author: '
-    author = gets.chomp
+    title = @input.title_input
+    author = @input.author_input
 
     book = Book.new(title, author)
     @book_list << book
@@ -90,42 +80,60 @@ class App
   end
 
   def create_rental
-    if @book_list.empty?
-      puts 'No book record found'
-    elsif @people_list.empty?
-      puts 'No person record found'
-    else
-      puts 'Select a book from the following list by number '
-      @book_list.each_with_index do |book, index|
-        puts "#{index}) Title: #{book.title}, Author: #{book.author}"
-      end
+    return puts 'No book records found' if @book_list.empty?
+    return puts 'No person records found' if @people_list.empty?
 
-      book_index = gets.chomp.to_i
+    display_books
+    book_index = @input.book_index_input(@book_list.size)
 
-      puts 'Select a person from the following list by number '
-      @people_list.each_with_index do |person, index|
-        puts "#{index}) [#{person.class}] Name : #{person.name}, ID: #{person.id}, Age: #{person.age}"
-      end
+    display_people
+    person_index = @input.person_index_input(@people_list.size)
 
-      person_index = gets.chomp.to_i
+    date = @input.date_input
 
-      print 'Date: '
-      date = gets.chomp
+    rental = Rental.new(date, @book_list[book_index], @people_list[person_index])
+    @rental_list << rental
 
-      @rental_list << Rental.new(date, @book_list[book_index], @people_list[person_index])
-      puts 'Rental created successfully '
-    end
+    puts 'Rental created successfully'
   end
 
   def list_rentals
-    print 'ID of person : '
-    id = gets.chomp.to_i
+    if @rental_list.empty?
+      puts 'No rental records found'
+      return
+    end
+
+    id = @input.person_id_input
 
     rentals = @rental_list.filter { |rental| rental.person.id == id }
 
-    puts 'Rentals :'
-    rentals.each do |rental|
-      puts "Date : #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}"
+    if rentals.empty?
+      puts 'No rentals found for the specified person ID'
+    else
+      puts 'Rentals:'
+      rentals.each do |rental|
+        puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}"
+      end
+    end
+  end
+
+  private
+
+  def display_books
+    puts 'Select a book from the following list by number:'
+    @book_list.each_with_index do |book, index|
+      puts "#{index}) Title: #{book.title}, Author: #{book.author}"
+    end
+  end
+
+  def display_people
+    puts 'Select a person from the following list by number:'
+    @people_list.each_with_index do |person, index|
+      puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
   end
 end
+
+app = App.new
+app.create_rental
+app.list_rentals
