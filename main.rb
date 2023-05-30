@@ -1,15 +1,9 @@
-require './app'
+require_relative 'app'
 require_relative 'interface'
+require_relative 'data_store'
 
-class Main
-  def initialize
-    @app = App.new
-  end
-
-  def run
-    Interface.new(@app).start
-  end
+def main
+  checking_options(hello_message)
 end
 
-main = Main.new
-main.run
+main
