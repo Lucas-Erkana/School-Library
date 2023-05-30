@@ -7,7 +7,7 @@ class Loader
   end
 
   def load_books
-    books = @handle_data.read_data('books.json') if File.exist?('books.json')
+    books = @handle_data.read_data('data/books.json') if File.exist?('data/books.json')
     return unless books
 
     books.each do |book|
@@ -16,7 +16,7 @@ class Loader
   end
 
   def load_persons
-    persons = @handle_data.read_data('person.json') if File.exist?('person.json')
+    persons = @handle_data.read_data('data/person.json') if File.exist?('data/person.json')
     return unless persons
 
     persons.each do |person|
@@ -29,7 +29,7 @@ class Loader
   end
 
   def load_rentals
-    rentals = @handle_data.read_data('rentals.json') if File.exist?('rentals.json')
+    rentals = @handle_data.read_data('data/rentals.json') if File.exist?('data/rentals.json')
     return unless rentals
 
     rentals.each do |rental|
