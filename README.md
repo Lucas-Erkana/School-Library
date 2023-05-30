@@ -55,6 +55,7 @@ This project helps to understand the basics of Ruby programming language. It is 
 - **Set up associations**
 - **basic UI**
 - **refactor to meet SOLID principles**
+- **Preserve data**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
