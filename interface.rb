@@ -27,8 +27,14 @@ def checking_options(app)
   until number == 'Q'
     display_options
     input = gets.chomp
-    puts 'This option is invalid, please select a number from [1..7]' if input < '1' || input > '7'
-    process_data(input, app)
+    if input.upcase == 'Q'
+      puts 'Saving data...'
+      puts 'Thank you! You are always welcome.'
+      number = 'Q'
+    else
+      puts 'This option is invalid, please select a number from [1..7]' if input < '1' || input > '7'
+      process_data(input, app)
+    end
   end
 end
 
