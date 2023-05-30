@@ -9,20 +9,20 @@ class Store
   end
 
   def store_people(file, data)
-    @people = @handle_data.read_data(file) if File.exist?(file)
+    @people = @handle_data.read_data("data/#{file}") if File.exist?("data/#{file}")
     @people.push(data)
-    @handle_data.save_data(file, @people)
+    @handle_data.save_data("data/#{file}", @people)
   end
 
   def store_books(file, data)
-    @books = @handle_data.read_data(file) if File.exist?(file)
+    @books = @handle_data.read_data("data/#{file}") if File.exist?("data/#{file}")
     @books.push(data)
-    @handle_data.save_data(file, @books)
+    @handle_data.save_data("data/#{file}", @books)
   end
 
   def store_rentals(file, data)
-    @rentals = @handle_data.read_data(file) if File.exist?(file)
+    @rentals = @handle_data.read_data("data/#{file}") if File.exist?("data/#{file}")
     @rentals.push(data)
-    @handle_data.save_data(file, @rentals)
+    @handle_data.save_data("data/#{file}", @rentals)
   end
 end
