@@ -31,7 +31,13 @@
 
 # 📖 School Library <a id="about-project"></a>
 
-This project helps to understand the basics of Ruby programming language. It is a collection of exercises and projects that will help you to understand the basics of OOPS in Ruby programming language.
+The OOP University Library app is a tool designed to assist the librarian in managing the library's collection of books and keeping track of borrowing activities. This app enables the librarian to perform the following tasks:
+
+Add new students or teachers: The app provides functionality to add new members to the library system, including students and teachers. This allows for easy management of user records and identification when borrowing books.
+
+Add new books: The librarian can add new books to the library's collection using the app. Each book can have attributes such as title, author, genre, and publication information. This ensures an organized inventory of available books.
+
+Record borrowing activities: The app facilitates the recording of borrowing activities by keeping track of who borrows a particular book and when it is borrowed. This information is essential for maintaining a lending history and ensuring accountability.
 
 ## 🛠 Built With <a id="built-with"></a>
 
@@ -55,7 +61,8 @@ This project helps to understand the basics of Ruby programming language. It is 
 - **Set up associations**
 - **basic UI**
 - **refactor to meet SOLID principles**
-- **Preserve data**
+- **preserve data**
+- **Add unit tests for all the methods in all the classes**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,7 +93,7 @@ To run the project, execute the following command in command line:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Author <a id="authors"></a>
+## 👥 Authors <a id="authors"></a>
 
 👤 **Karan Jain**
 
@@ -106,7 +113,7 @@ To run the project, execute the following command in command line:
 
 ## 🔭 Future Features <a id="future-features"></a>
 
-- [ ] **Add unit tests for all the methods in all the classes**
+- [ ] **Create a GUI**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
