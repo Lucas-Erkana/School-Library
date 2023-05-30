@@ -1,9 +1,12 @@
 require './app'
 require './user_selection'
+require './loader'
 
 class Main
   def initialize
     @app = App.new
+    @loader = Loader.new(@app)
+    @loader.load_all
   end
 
   puts 'Welcome to School Library App!'
