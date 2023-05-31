@@ -1,4 +1,4 @@
-require_relative '../classes/person'
+require_relative '../person'
 
 describe Person do
   before :each do
