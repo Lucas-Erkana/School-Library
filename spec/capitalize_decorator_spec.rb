@@ -1,4 +1,4 @@
-require_relative '../classes/capitalize_decorator'
+require_relative '../capitalize_decorator'
 
 describe CapitalizeDecorator do
   before :each do
