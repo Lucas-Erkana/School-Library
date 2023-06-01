@@ -7,5 +7,7 @@ class Rental
     @book = book
     @person.rental << self
     @book.rental << self
+    # @person['rental'] << self
+    # @book['rental'] << self
   end
 end
